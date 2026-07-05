@@ -63,7 +63,7 @@ show grants for 'repl'@'192.168.56.14';
 
 И получаем следующий результат:
 
-<img src = "img/12-061.png" width = 40%>
+<img src = "img/12-061.png" width = 50%>
 
 #### Далее настраиваем Slave:
 
@@ -78,11 +78,11 @@ read_only = 1
 
 После чего проверяю, что переменные применились:
 
-<img src = "img/12-062.png" width = 40%>
+<img src = "img/12-062.png" width = 50%>
 
 И проверяю доступ slave к master:
 
-<img src = "img/12-063.png" width = 40%>
+<img src = "img/12-063.png" width = 60%>
 
 #### Поднимаем на реплике дамп Sakila
 
@@ -214,7 +214,7 @@ Query OK, 1 row affected (0.00 sec)
 
 И теперь проверяем на реплике:
 
-<img src = "img/12-064.png" width = 40%>
+<img src = "img/12-064.png" width = 60%>
 
 ---
 
@@ -237,15 +237,15 @@ Query OK, 1 row affected (0.00 sec)
 
 Затем выполнил restart mysql.service и проверяю значения нужных переменных:
 
-<img src = "img/12-065.png" width = 40%>
+<img src = "img/12-065.png" width = 60%>
 
 Затем создал аналогичного repl пользователя для ВМ 192.168.56.14:
 
-<img src = "img/12-066.png" width = 40%>
+<img src = "img/12-066.png" width = 60%>
 
 Далее командой show master status; посмотрел File и Position для дальнейшей настойки репликации:
 
-<img src = "img/12-067.png" width = 40%>
+<img src = "img/12-067.png" width = 60%>
 
 #### Настраиваем текущий мастер быть еще и репликой:
 
@@ -297,17 +297,17 @@ ERROR 1872 (HY000): Replica failed to initialize applier metadata structure from
 
 Далее снимаю статус реплик с обоих инстансов и проверяю на отсутствие ошибок:
 
-<img src = "img/12-068.png" width = 60%>
+<img src = "img/12-068.png" width = 80%>
 
 #### Проверка master-master:
 
 Сначала на 192.168.56.13 выполняю:
 
-<img src = "img/12-069.png" width = 40%>
+<img src = "img/12-069.png" width = 60%>
 
 Проверяем на 192.168.56.14:
 
-<img src = "img/12-0691.png" width = 40%>
+<img src = "img/12-0691.png" width = 60%>
 
 Далее на 192.168.56.14 выполняю:
 ```
@@ -317,4 +317,4 @@ Query OK, 1 row affected (0.01 sec)
 
 И проверяю на 192.168.56.13:
 
-<img src = "img/12-0692.png" width = 40%>
+<img src = "img/12-0692.png" width = 60%>
