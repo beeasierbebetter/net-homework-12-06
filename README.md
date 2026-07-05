@@ -297,7 +297,7 @@ ERROR 1872 (HY000): Replica failed to initialize applier metadata structure from
 
 Далее снимаю статус реплик с обоих инстансов и проверяю на отсутствие ошибок:
 
-<img src = "img/12-068.png" width = 80%>
+<img src = "img/12-068.png" width = 100%>
 
 #### Проверка master-master:
 
